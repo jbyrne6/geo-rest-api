@@ -29,7 +29,7 @@ This should returns a Boolean value indicating whether the provided objects spat
 ## Libraries
 - Flask
 
-- ArcGIS
+- ArcGIS API (Python)
 
 - Docker
 

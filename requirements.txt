@@ -1,2 +1,2 @@
 Flask==2.0.2
-Shapely==1.8.0
+arcgis==1.9.1
