@@ -9,12 +9,17 @@ def geo_rest_api():
 
 @app.route('/polygons-intersect', methods=['POST'])
 def checkPolygonIntersection():
-
+    # geojson data -> json
     data = request.get_json()
+
+    # polygons being compared for intersection
     polygon_1 = Polygon(data['features'][0])
     polygon_2 = Polygon(data['features'][1])
+
+    #  boolean value for if polygons intersect or not
     geom_intersection = polygon_1.intersect(second_geometry=polygon_2, dimension=4)
 
+    # return boolean polygon intersection result via json
     return jsonify({'intersection' : geom_intersection})
 
 if __name__ == '__main__':
