@@ -38,4 +38,10 @@ This should returns a Boolean value indicating whether the provided objects spat
 
 - Build and run this project with `docker-compose up --build`
 
-- Go to the url [localhost:5000](https://localhost:5000) once the project it built to test that the api is running
+- Go to the url [localhost:5000](https://localhost:5000) once the project is built to test that the api is running
+
+## Endpoints
+| Endpoints           | Method | Input                     | Ouput | 
+| ------------------- | ------ | ------------------------- | --------------------------- |
+| /                   | GET    | N/A                       | Greeting message (json)     |
+| /polygons-intersect | POST   | 2 GeoJSON polygon objects | Intersection boolean (json) |
