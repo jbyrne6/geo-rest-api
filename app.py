@@ -13,11 +13,12 @@ def checkPolygonIntersection():
     data = request.get_json()
 
     # polygons being compared for intersection
-    polygon_1 = Polygon(data['features'][0])
-    polygon_2 = Polygon(data['features'][1])
+    polygon_1 = Polygon(data['features'][0]["geometry"])
+    polygon_2 = Polygon(data['features'][1]["geometry"])
 
     #  boolean value for if polygons intersect or not
-    geom_intersection = polygon_1.intersect(second_geometry=polygon_2, dimension=4)
+    # geom_intersection = polygon_1.intersect(second_geometry=polygon_2, dimension=4)
+    geom_intersection = polygon_1.overlaps(polygon_2)
 
     # return boolean polygon intersection result via json
     return jsonify({'intersection' : geom_intersection})
