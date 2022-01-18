@@ -1,5 +1,11 @@
 # GEO REST API
 
+### Author: James Byrne
+### Date: 1/17/2022
+### For: Maxar code challenge
+
+---
+
 ## Problem:
 Create a REST API, with a single resource, that accepts an HTTP POST method request with two GeoJSON polygon objects.
 This should returns a Boolean value indicating whether the provided objects spatially intersect one another.
@@ -22,5 +28,14 @@ This should returns a Boolean value indicating whether the provided objects spat
 
 ## Libraries
 - Flask
+
 - ArcGIS
+
 - Docker
+
+## Running Dev Environment
+- Clone this repo with `git clone https://github.com/jbyrne6/geo-rest-api.git` to your computer
+
+- Build and run this project with `docker-compose up --build`
+
+- Go to the url [localhost:5000](https://localhost:5000) once the project it built to test that the api is running
